@@ -8,6 +8,4 @@ public interface CardContentRepository extends SolrCrudRepository<CardContent, L
 
 	CardContent findByCardId(Long cardId);
 	
-	//@Query
-	
 }
