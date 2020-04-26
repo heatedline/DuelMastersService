@@ -8,6 +8,11 @@ import java.util.Map.Entry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Simple class to provide ways of exception handling and to throw a proper user friendly message.
+ * @author heatedline
+ *
+ */
 public class DuelMastersServiceException extends Exception {
 	
 	private static final long serialVersionUID = 1L;

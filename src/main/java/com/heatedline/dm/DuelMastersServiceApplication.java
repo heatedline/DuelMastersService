@@ -19,6 +19,11 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+/**
+ * Main application class where we have configured Spring Boot.
+ * @author heatedline
+ *
+ */
 @SpringBootApplication
 @EnableAutoConfiguration
 public class DuelMastersServiceApplication extends SpringBootServletInitializer {

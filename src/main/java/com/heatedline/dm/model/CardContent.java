@@ -4,48 +4,28 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
-@SolrDocument(collection = "DuelMasters")
+/**
+ * Model class to map with SolrDocument and store necessary information to
+ * ApacheSolr server.
+ * 
+ * @author heatedline
+ *
+ */
+@SolrDocument(collection = "cardcontent")
 public class CardContent {
 
 	@Id
-	@Indexed(name = "cardId", type = "long")
-	private Long cardId;
-
-	@Indexed(name = "pageid", type = "long")
-	private Long pageid;
-
-	@Indexed(name = "ns", type = "long")
-	private Long ns;
+	@Indexed(name = "id", type = "string")
+	private String id;
 
 	@Indexed(name = "title", type = "string")
 	private String title;
 
-	@Indexed(name = "content", type = "string")
-	private String revisions;
+	@Indexed(name = "details", type = "string")
+	private String details;
 
-	public Long getCardId() {
-		return cardId;
-	}
-
-	public void setCardId(Long cardId) {
-		this.cardId = cardId;
-	}
-
-	public Long getPageid() {
-		return pageid;
-	}
-
-	public void setPageid(Long pageid) {
-		this.pageid = pageid;
-	}
-
-	public Long getNs() {
-		return ns;
-	}
-
-	public void setNs(Long ns) {
-		this.ns = ns;
-	}
+	@Indexed(name = "_version_", type = "long")
+	private Long _version_;
 
 	public String getTitle() {
 		return title;
@@ -55,12 +35,28 @@ public class CardContent {
 		this.title = title;
 	}
 
-	public String getRevisions() {
-		return revisions;
+	public String getDetails() {
+		return details;
 	}
 
-	public void setRevisions(String revisions) {
-		this.revisions = revisions;
+	public void setDetails(String details) {
+		this.details = details;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public Long get_version_() {
+		return _version_;
+	}
+
+	public void set_version_(Long _version_) {
+		this._version_ = _version_;
 	}
 
 }
