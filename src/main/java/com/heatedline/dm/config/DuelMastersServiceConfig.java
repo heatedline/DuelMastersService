@@ -19,7 +19,7 @@ public class DuelMastersServiceConfig {
 	
 	@Bean
 	public SolrClient solrClient() {
-		return new HttpSolrClient.Builder("http://localhost:8983/solr/").build();
+		return new HttpSolrClient.Builder("http://localhost:8983/solr/cardcontent").build();
 	}
 
 }

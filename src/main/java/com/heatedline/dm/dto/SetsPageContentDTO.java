@@ -1,6 +1,6 @@
 package com.heatedline.dm.dto;
 
-public class PageContentDTO {
+public class SetsPageContentDTO {
 
 	private Parse parse;
 
@@ -14,7 +14,7 @@ public class PageContentDTO {
 
 	@Override
 	public String toString() {
-		return "PageContentDTO [parse=" + parse + "]";
+		return "SetsPageContentDTO [parse=" + parse + "]";
 	}
 
 }

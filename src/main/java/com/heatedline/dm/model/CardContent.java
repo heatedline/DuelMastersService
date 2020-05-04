@@ -18,6 +18,9 @@ public class CardContent {
 	@Indexed(name = "id", type = "string")
 	private String id;
 
+	@Indexed(name = "pageId", type = "long")
+	private Long pageId;
+
 	@Indexed(name = "title", type = "string")
 	private String title;
 
@@ -57,6 +60,14 @@ public class CardContent {
 
 	public void set_version_(Long _version_) {
 		this._version_ = _version_;
+	}
+
+	public Long getPageId() {
+		return pageId;
+	}
+
+	public void setPageId(Long pageId) {
+		this.pageId = pageId;
 	}
 
 }
